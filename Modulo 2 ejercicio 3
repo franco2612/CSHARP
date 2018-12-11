@@ -1,0 +1,13 @@
+using System;
+
+namespace modulo2_tarea_3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int multiplicacion = 13 * 12;
+            Console.WriteLine(multiplicacion);
+        }
+    }
+}
