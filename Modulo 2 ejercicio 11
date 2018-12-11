@@ -1,0 +1,23 @@
+using System;
+
+namespace modulo2_tarea11
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {   int numero1;
+            Console.WriteLine("ingrese primer numero");
+            numero1 = Convert.ToInt32(Console.ReadLine());
+            int numero2;
+            Console.WriteLine("ingrese segudno numero.");
+            numero2 = Convert.ToInt32(Console.ReadLine());
+            if (numero2 > numero1)
+                Console.WriteLine("el numero" + numero2 + "es mayor.");
+            else
+                if (numero1 > numero2)
+                Console.WriteLine("el numero" + numero1 + "es mayor.");
+            else
+                Console.WriteLine("los dos numeros son inguales.");
+        }
+    }
+}
