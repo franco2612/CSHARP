@@ -1,0 +1,13 @@
+using System;
+
+namespace modulo_2_tarea4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int resta = 321 - 213;
+            Console.WriteLine(resta);
+        }
+    }
+}
