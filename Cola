@@ -1,0 +1,28 @@
+using System;
+using System.Collections;
+
+
+namespace Cola                                                                                     
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numero;
+            Queue miCola = new Queue();
+            miCola.Enqueue(55);
+            miCola.Enqueue(80);
+            miCola.Enqueue(19);
+            miCola.Enqueue(7);
+            miCola.Enqueue(6);
+            
+            for(byte i=0; i<5; i++)
+            {
+                numero = (int) miCola.Dequeue();
+                Console.WriteLine(numero);
+            }
+        }
+    }
+}
+ 
+
