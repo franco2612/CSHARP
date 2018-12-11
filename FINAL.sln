@@ -1,25 +1,145 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.136
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FINAL", "FINAL\FINAL.csproj", "{F60310E5-99BE-42E7-A623-6C4C58B4EBD4}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F60310E5-99BE-42E7-A623-6C4C58B4EBD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F60310E5-99BE-42E7-A623-6C4C58B4EBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F60310E5-99BE-42E7-A623-6C4C58B4EBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F60310E5-99BE-42E7-A623-6C4C58B4EBD4}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {05CA97F7-3F57-40C8-8687-EFEAB877F7EB}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+
+namespace EXAMEN_FINAL
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack mipila = new Stack(); //Creo mi pila
+            Stack mipila2 = new Stack(); // creo la pila2
+            int opción = 0; //opcion del menu
+            do
+            {
+                Console.Clear(); // limpia la consola
+                Console.WriteLine("MENU DE OPCIONES:"); // Muestra en pantalla el menu de ocpiones
+                Console.WriteLine("1.- Crear pila"); // Muestra en pantalla la opcion uno
+                Console.WriteLine("2.- Borrar pila "); // Muestra en pantalla la opcion dos
+                Console.WriteLine("3.- Agregar patente"); // Muestra en pantalla la opcion tres
+                Console.WriteLine("4.- Borrar patente"); // Muestra en pantalla la opcion cuatro
+                Console.WriteLine("5.- Listar todas las patentes"); // Muestra en pantalla la opcion cinco
+                Console.WriteLine("6.- Listar la primera patente "); // Muestra en pantalla la opcion seis
+                Console.WriteLine("7.- Cantidad de patentes"); // Muestra en patanlla la opcion siete
+                Console.WriteLine("8.- Agregar vehiculos"); // Muestra en pantall la opcion ocho
+                Console.WriteLine("9.- Descripcion del programa"); // Muestra en pantalla la opcion nueve
+                Console.WriteLine("10. Salir"); // Mustra en pantalla la opcion diez
+                Console.WriteLine("Ingrese una opción:"); // Muestra en pantalla y le pide al usuario que ingrese una opcion
+                opción = Convert.ToInt32(Console.ReadLine());
+                switch (opción)
+                {
+                    case 1:
+                        Console.WriteLine("La pila2 fue creada con éxito."); // Muestra en pantalla el mensaje
+                        Console.WriteLine("Presione una tecla para continuar..."); // Muestra en pantalla y le pide al usuario que presione una tecla para continuar
+                        break;
+
+                    case 2:
+                        mipila2.Clear(); // Borra la pila2
+                        Console.WriteLine("La pila2 fue borrada con éxito."); // Muestra en pantalla el mensaje
+                        Console.WriteLine("Presione una tecla para continuar..."); // Muestra en pantalla y le pide al usuario que presione una tecla para continuar
+                        break;
+
+                    case 3:
+                        try
+                        {
+                            Console.Clear(); // Limpia la consola
+                            Console.WriteLine("Ingrese una patente:"); // Muestra en pantalla y le dice al usuario que ingrese una patente
+                            string patente; // Declaro una variable tipo string
+                            patente = Convert.ToString(Console.ReadLine());
+                            bool aceptable = Regex.IsMatch(patente, @"^[A-Z]{3}[0-9]{3}$"); // Una expresion regular
+                            if (aceptable) // condicion if
+                            {
+                                Console.WriteLine("La patente fue ingresada corractamente."); // Muestra en pantalla el mensaje
+                                Console.WriteLine("Presione una tecla para continuar..."); // Muestra en pantalla y le pide al usuario que presione una tecla para continuar
+                                mipila.Push(patente); // Agrega la patente a la pila
+                                Console.ReadKey(); // Obtiene la siguiente tecla presionada por el usuario
+                                Console.Clear(); // Limpia consola
+                            }
+                            else  // condicion else
+                            {
+                                Console.Clear(); //Limpia consola
+                                Console.WriteLine("La patente  que desea ingresada es incorracta."); // Muestra en pantalla el mensaje
+                                Console.WriteLine("Presione una tecla para continuar..."); // Muestra en pantalla y le pide al usuario que presione una tecla para continuar
+                            }
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Error: ingresar patentes de 3 letras y 3 numeros"); // Muestra en pantalla el mensaje
+                        }
+                        break;
+
+                    case 4:
+                        try
+                        {
+                            string patente = (string)mipila.Pop(); // Elimina la patente
+                            Console.WriteLine(" la patente" + patente + "borrada con éxito."); // Muestra en pantalla el mensaje
+                            Console.WriteLine("Presione una tecla para continuar..."); // Muestra en pantalla y le pide al usuario que presione una tecla para continuar
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Error: La pila esta vacia."); // Muestra en pantalla el mensaje
+                            Console.WriteLine("Presione una tecla para continuar..."); // Muestra en pantalla y le pide al usuario que presione una tecla para continuar
+                        }
+                        break;
+
+                    case 5:
+                        Console.WriteLine("Contenido de la pila:"); // Muestra en pantalla el contenido de la pila utilizando enumeradores
+                        IEnumerator miEnumerador = mipila.GetEnumerator();
+                        while (miEnumerador.MoveNext())
+                            Console.WriteLine("{0}", miEnumerador.Current);
+                        break;
+
+                    case 6:
+                        try
+                        {
+                            string patente = (string)mipila.Peek(); // Indica el primer elemento de la pila
+                            Console.WriteLine("La primera patente es"  + patente + "."); // Muestra en pantalla el mensaje
+                            Console.WriteLine("Presione una tecla para continuar..."); // Muestra en pantalla y le pide al usuario que presione una tecla para continuar
+                        }
+                        catch
+                        {
+                            Console.WriteLine("La pila esta vacia"); // Muestra en pantalla el mensaje
+                            Console.WriteLine("Presione una tecla para continuar..."); // Muestra en pantalle y le pide al usuario que presione una tecla para continuar
+                        }
+                        break;
+
+                    case 7:
+                        Console.WriteLine("La cantidad de patentes que contiene la pila es:"); // Muestra en pantalla
+                        Console.WriteLine(mipila.Count); // Muestra en pantalla el contenido de la pila
+                        break;
+
+                    case 8:
+                        Console.WriteLine("Ingrese nombre de su vehiculo:"); // Muestra en pantalla y le dice al usuario que ingrese nombre de su vehiculo
+                        string nombre; // Declaro una variable tipo string
+                        nombre = Convert.ToString(Console.ReadLine());
+                        mipila.Push(nombre); // Agrega el nombre del vehiculo a la pila
+                        Console.WriteLine("Presione una tecla para continuar..."); // Muestra en pantalla y le pide al usuario que presione una tecla para continuar
+                        break;
+
+                    case 9:
+                        Console.WriteLine("=============================================================="); // Muestra en pantalla
+                        Console.WriteLine("Programa realizado para el examen final de Estructura de datos"); // Muestra en pantalla
+                        Console.WriteLine("2 cuatrimeste de 2018/Carrera: Analisis de Sistemas/IFTSº18"); // Muestra en pantalla
+                        Console.WriteLine("2 llamadado: Lunes 10/12/2018");// Muestra en pantalla
+                        Console.WriteLine("Alumno: Alvarez Franco Tomas/DNI:41667063");// Muestra en pantalla
+                        Console.WriteLine("===============================================================");// Muestra en pantalla
+                        Console.WriteLine("Presione una tecla para continuar..."); // Muestra en pantalla y le pide al usuario que presione una tecla para continuar
+                        break;
+
+                    case 10:
+                        Console.WriteLine("Fin del programa"); // Muestra en pantalla el mensaje
+                        break;
+                    default:   // En caso que no se cumpla la condicion muestra en pantalla el mensaje
+                        Console.WriteLine("ERROR: Ingresa una opcion valida.");
+                        Console.WriteLine("Presione una tecla para continuar..."); // Muestra en pantalla y le pide al usuario que presione una tecla para continuar
+                        break;
+                }
+                Console.ReadKey(); //Obtiene la siguiente tecla presionada por el usuario
+            }
+            while (opción != 10);
+        }
+    }
+}
