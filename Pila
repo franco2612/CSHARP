@@ -1,0 +1,48 @@
+using System;
+using System.Collections;
+
+
+namespace ejercicio_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numero1;
+            int numero2;
+            int numero3;
+            int numero4;
+            int numero5;
+
+            Console.WriteLine("ingrese primer numero");
+            numero1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("ingrese segundo numero");
+            numero2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("ingrese tercer numero");
+            numero3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("ingrese cuarto numero");
+            numero4 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("ingrese quinto numero");
+            numero5 = Convert.ToInt32(Console.ReadLine());
+            Stack mipila = new Stack();
+            mipila.Push(numero1);
+            mipila.Push(numero2);
+            mipila.Push(numero3);
+            mipila.Push(numero4);
+            mipila.Push(numero5);
+            for (byte i = 0; i < 5; i++)
+            {
+                numero1 = (int)mipila.Pop();
+                Console.WriteLine(numero1);
+                numero2 = (int)mipila.Pop();                                    
+                Console.WriteLine(numero2);
+                numero3 = (int)mipila.Pop();
+                Console.WriteLine(numero3);
+                numero4 = (int)mipila.Pop();
+                Console.WriteLine(numero4);
+                numero5 = (int)mipila.Pop();
+                Console.WriteLine(numero5);
+              }
+         }
+    }
+}
