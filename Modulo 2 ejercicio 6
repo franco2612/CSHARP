@@ -1,0 +1,18 @@
+using System;
+
+namespace modulo_2_tarea_6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int primerNumero;
+            int SegundoNumero;
+            int multiplicacion;
+            primerNumero = 12;
+            SegundoNumero = 102;
+            multiplicacion = primerNumero * SegundoNumero;
+            Console.WriteLine("la multiplicacion es"+multiplicacion);
+        }
+    }
+}
