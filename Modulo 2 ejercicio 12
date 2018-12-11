@@ -1,0 +1,23 @@
+using System;
+
+namespace modulo_2_ejercicio_12
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numero1;
+            Console.WriteLine("ingrese primer numero.");
+            numero1 = Convert.ToInt32(Console.ReadLine());
+            int numero2;
+            Console.WriteLine("ingrese segundo numero.");
+            numero2 = Convert.ToInt32(Console.ReadLine());
+            if (numero2 != 0)
+                Console.WriteLine("la division da" + numero1 / numero2);
+            else
+                if (numero2 == 0)
+                Console.WriteLine("no se puede dividir por cero");
+
+        }
+    }
+}
