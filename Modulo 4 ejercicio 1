@@ -1,0 +1,17 @@
+using System;
+
+namespace modulo_4_tarea_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numeros =
+                       {4,1,19,32,27,60,62};
+            int suma;
+            suma = numeros[0] + numeros[1] + numeros[2] + numeros[3] + numeros[4] + numeros[5] + numeros[6];
+            Console.WriteLine("la suma es" + suma);
+                
+        }
+    }
+}
