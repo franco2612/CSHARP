@@ -1,0 +1,13 @@
+using System;
+namespace modulo_2_ejercicio_16
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int contador;
+            for (contador = 1; contador <= 21; contador++)
+                Console.WriteLine(contador);
+        }
+    }
+}
