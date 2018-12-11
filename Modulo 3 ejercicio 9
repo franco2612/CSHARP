@@ -1,0 +1,28 @@
+using System;
+
+namespace modulo_3_tarea_9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string usuario;
+            string contraseña1;
+            string contrasena2;
+            Console.WriteLine("ingrese usuario.");
+            usuario = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("ingrese contraseña.");
+            contraseña1 = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("ingrese nuevamente la contraseña.");
+            contrasena2 = Convert.ToString(Console.ReadLine());
+            if(contraseña1==contrasena2)
+            {
+               Console.WriteLine("contraseña correcta.");
+            }
+               else
+            {
+                Console.WriteLine("contraseña incorrecta. vuelva a ingresar");
+              }
+        }
+    }
+ }
