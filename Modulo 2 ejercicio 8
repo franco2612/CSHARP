@@ -1,0 +1,20 @@
+using System;
+
+
+namespace modulo2_tarea8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1;
+            int num2;
+            int multiplicacion;
+            num1 = 10;
+            num2 = 25;
+            multiplicacion = num1 * num2;
+            Console.WriteLine("la multiplicacion es" + multiplicacion);
+
+        }
+    }
+}
