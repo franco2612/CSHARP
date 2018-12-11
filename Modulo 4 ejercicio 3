@@ -1,0 +1,18 @@
+using System;
+
+namespace modulo_4_tarea_3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string saludo = "hola como estas";
+            Console.WriteLine("El texto es:{0}",saludo);
+            Console.WriteLine("La primera letra es:{0}",saludo[0]);
+            Console.WriteLine("la longitud del texto es{0}",saludo.Length);
+            Console.WriteLine("En minuscula:{0}", saludo.ToLower());
+            Console.WriteLine("En mayuscula:{0}", saludo.ToUpper());
+        }
+    }
+ }
+    
