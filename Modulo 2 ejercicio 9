@@ -1,0 +1,20 @@
+using System;
+
+namespace modulo_2_tarea_9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int PrimerNumero;
+            int SegundoNumero;
+            int Multiplicacion;
+            Console.WriteLine("introduzca primer numero");
+            PrimerNumero=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("introduzca segundo numero");
+            SegundoNumero =Convert.ToInt32(Console.ReadLine());
+            Multiplicacion = PrimerNumero * SegundoNumero;
+            Console.WriteLine("la multiplicacion da");
+        }
+    }
+}
