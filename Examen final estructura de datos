@@ -123,7 +123,6 @@ namespace EXAMEN_FINAL
                         Console.WriteLine("Programa realizado para el examen final de Estructura de datos"); // Muestra en pantalla
                         Console.WriteLine("2 cuatrimeste de 2018/Carrera: Analisis de Sistemas/IFTSº18"); // Muestra en pantalla
                         Console.WriteLine("2 llamadado: Lunes 10/12/2018");// Muestra en pantalla
-                        Console.WriteLine("Alumno: Alvarez Franco Tomas/DNI:41667063");// Muestra en pantalla
                         Console.WriteLine("===============================================================");// Muestra en pantalla
                         Console.WriteLine("Presione una tecla para continuar..."); // Muestra en pantalla y le pide al usuario que presione una tecla para continuar
                         break;
