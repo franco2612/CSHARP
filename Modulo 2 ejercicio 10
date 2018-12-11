@@ -1,0 +1,17 @@
+using System;
+
+namespace modulo_2_ejercicio_10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("ingrese un numero");
+            int pares = Convert.ToInt32(Console.ReadLine());
+            if (pares % 2 == 0)
+                Console.WriteLine("el numero es par.");
+            else
+                Console.WriteLine("el numero es impar.");
+        }
+    }
+}
