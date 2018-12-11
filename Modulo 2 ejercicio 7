@@ -1,0 +1,18 @@
+using System;
+
+namespace modulo_2_tarea7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int PrimerNumero;
+            int SegundoNumero;
+            int suma;
+            PrimerNumero = 200;
+            SegundoNumero = 1111;
+            suma = PrimerNumero + SegundoNumero;
+            Console.WriteLine("la suma es" + suma);
+        }
+    }
+}
