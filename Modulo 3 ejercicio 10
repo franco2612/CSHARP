@@ -1,0 +1,23 @@
+using System;
+
+namespace modulo3_tarea_10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string nombre;
+            Console.WriteLine("introduzca su nombre:");
+            nombre = Convert.ToString (Console.ReadLine());
+            if (nombre == "Martin")
+            {
+                Console.WriteLine("Hola");
+            }
+             else 
+              {
+                Console.WriteLine("No te conozco.");
+             }
+         
+        }
+    }
+}
