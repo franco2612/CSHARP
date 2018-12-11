@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ejer.Asistencia_a_clases
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double clases;
+            double asistencia;
+            Console.WriteLine("ingrese cantidad de clases");
+            clases = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("ingrese asistencia");
+            asistencia = Convert.ToInt32(Console.ReadLine());
+
+            if(clases/asistencia<=0.75)
+            {
+                Console.WriteLine("Te quedaste libre.Nos vemos el año que viene.");
+            }
+            else
+            {
+                Console.WriteLine("Sos alumno regular.");
+            }
+           
+        }
+    }
+}
