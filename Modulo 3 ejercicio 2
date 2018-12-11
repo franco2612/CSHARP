@@ -1,0 +1,29 @@
+using System;
+
+
+namespace modulo_3_tarea1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int usuario;
+            int contraseña;
+            do
+            {
+                Console.WriteLine("ingrese usuario:");
+                usuario = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("ingrese contraseña:");
+                contraseña = Convert.ToInt32(Console.ReadLine());
+                if (usuario != 1234)
+                    Console.WriteLine("usuario incorrecto");
+                if (contraseña != 1111)
+                    Console.WriteLine("contraseña incorrecta");
+            }
+            while (usuario != 1234);
+            Console.WriteLine("usuario correcto.");
+            while (contraseña != 1111);
+                Console.WriteLine("contraseña correcta.");
+            }
+    }
+}
