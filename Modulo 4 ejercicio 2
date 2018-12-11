@@ -1,0 +1,18 @@
+using System;
+
+namespace modulo4_tarea2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string nombre = "Bautista";
+            int longitud = nombre.Length;
+            Console.WriteLine("la longitud de {0}es{1}", nombre,longitud);
+            for (int i = 0; i < longitud; i++)
+            {
+                Console.WriteLine("la letra {0}es {1}", i,nombre[i]);
+            }
+       }
+   }
+}
