@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+
+namespace lista
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> milista = new List<string>();
+            milista.Add("Agustina");
+            milista.Add("Natalia");
+            milista.Add("Noelia");
+            milista.Add("Mauro");
+            milista.Add("Dario");
+            milista.Add("Fernando");
+            milista.RemoveAt(3);
+            milista.Remove("Mauro");
+            Console.WriteLine("contenido actual:");
+            foreach (string nombre in milista)
+                Console.WriteLine(nombre);                
+        }
+    }
+}
