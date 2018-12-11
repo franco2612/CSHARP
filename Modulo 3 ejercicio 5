@@ -1,0 +1,19 @@
+using System;
+
+
+namespace modulo3_tarea5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numero = 1;
+            while (numero != 0)
+            {
+                Console.WriteLine("hola");
+                numero = numero + 1;
+            } 
+            
+         }   
+    }
+}
