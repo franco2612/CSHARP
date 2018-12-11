@@ -1,0 +1,18 @@
+using System;
+namespace modulo3_tarea_8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("ingrese una letra:");
+            string letra = Convert.ToString(Console.ReadLine());
+            if ("aeiouAEIUO".Contains(letra))
+            {
+                Console.WriteLine("la" + letra + "es una vocal.");
+            }
+                else
+                Console.WriteLine("La" + letra + "no es una vocal .");
+        }
+    }
+}
