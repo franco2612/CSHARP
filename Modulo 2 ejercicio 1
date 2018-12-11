@@ -1,0 +1,13 @@
+using System;
+
+namespace modulo_2_tarea_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int resultado = 200 + 565;
+            Console.WriteLine(resultado);
+        }
+    }
+}
